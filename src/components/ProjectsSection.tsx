@@ -1,33 +1,32 @@
-
 import React from 'react';
 import { ProjectCard } from './ProjectCard';
 
 export const ProjectsSection = () => {
   const projects = [
     {
-      title: 'E-Commerce Web App',
-      description: 'Full-stack React & Node.js application with payment integration',
-      technologies: ['React', 'Node.js', 'MongoDB'],
-      url: 'https://github.com/example/ecommerce-app',
+      title: 'DashBoard UI',
+      description: 'Modern admin dashboard with payment integration built using Next.js and ShadCN UI components',
+      technologies: ['NextJS','ShadCN UI'],
+      url: 'https://dash-ui-ruby.vercel.app/',
       status: 'Completed' as const
     },
     {
-      title: 'AI Chatbot Assistant',
-      description: 'Machine learning powered chatbot using Python and TensorFlow',
-      technologies: ['Python', 'TensorFlow', 'NLP'],
-      url: 'https://github.com/example/ai-chatbot',
-      status: 'In Progress' as const
+      title: 'RESK Chatbot Assistant',
+      description: 'AI-powered conversational assistant leveraging Openrouter API with a Next.js frontend',
+      technologies: ['NextJS', 'ShadCN UI', 'Openrouter API'],
+      url: 'https://resk-chatbot.vercel.app/',
+      status: 'Completed' as const
     },
     {
-      title: 'Task Management System',
-      description: 'Java Spring Boot REST API with React frontend',
-      technologies: ['Java', 'Spring Boot', 'React'],
-      url: 'https://github.com/example/task-manager',
+      title: 'SRK College Website Redesign',
+      description: 'Complete college website overhaul featuring Next.js frontend with Tailwind CSS styling',
+      technologies: ['NextJS', 'ShadCN UI', 'Tailwind CSS'],
+      url: 'https://srkit-innovate-hub.vercel.app/',
       status: 'Completed' as const
     },
     {
       title: 'Data Analytics Dashboard',
-      description: 'Interactive dashboard for business intelligence and reporting',
+      description: 'Streamlit-based data visualization tool for analyzing and reporting business metrics',
       technologies: ['Python', 'Streamlit', 'Pandas'],
       url: 'https://github.com/example/analytics-dashboard',
       status: 'In Progress' as const

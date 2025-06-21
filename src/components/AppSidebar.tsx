@@ -62,23 +62,33 @@ const portfolioLinks = [
 
 const projectLinks = [
   {
-    title: 'E-Commerce Web App',
-    url: 'https://github.com/example/ecommerce-app',
+    title: 'DashBoard UI',
+    url: 'https://dash-ui-ruby.vercel.app/',
     icon: FolderOpen,
   },
   {
-    title: 'AI Chatbot Assistant',
-    url: 'https://github.com/example/ai-chatbot',
+    title: 'RESK Chatbot Assistant',
+    url: 'https://resk-chatbot.vercel.app/',
     icon: FolderOpen,
   },
   {
-    title: 'Task Management System',
-    url: 'https://github.com/example/task-manager',
+    title: 'SRK College Website Redesign',
+    url: 'https://srkit-innovate-hub.vercel.app/',
     icon: FolderOpen,
   },
   {
-    title: 'Data Analytics Dashboard',
-    url: 'https://github.com/example/analytics-dashboard',
+    title: 'Saas PortFolio',
+    url: 'https://resk-portfolio.vercel.app/',
+    icon: FolderOpen,
+  },
+  {
+    title: 'Simple Landing Portfolio Page',
+    url: 'https://re-sk.netlify.app/',
+    icon: FolderOpen,
+  },
+  {
+    title: 'gen Ai Search Engine',
+    url: 'https://resk-genai-app.streamlit.app/',
     icon: FolderOpen,
   },
 ];
