@@ -87,8 +87,13 @@ const projectLinks = [
     icon: FolderOpen,
   },
   {
-    title: 'gen Ai Search Engine',
+    title: 'Gen Ai Search Engine',
     url: 'https://resk-genai-app.streamlit.app/',
+    icon: FolderOpen,
+  },
+  {
+    title: 'Breast Cancer Prediction',
+    url: 'https://predictbc.streamlit.app/',
     icon: FolderOpen,
   },
 ];
