@@ -96,6 +96,11 @@ const projectLinks = [
     url: 'https://predictbc.streamlit.app/',
     icon: FolderOpen,
   },
+  {
+    title: 'MediScan.AI',
+    url: 'https://med-scan-ai.streamlit.app/',
+    icon: FolderOpen,
+  },
 ];
 
 export function AppSidebar() {
