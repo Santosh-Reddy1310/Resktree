@@ -101,6 +101,11 @@ const projectLinks = [
     url: 'https://med-scan-ai.streamlit.app/',
     icon: FolderOpen,
   },
+  {
+    title: 'TeslaPulse.AI',
+    url: 'https://tesla-pulse.vercel.app/',
+    icon: FolderOpen,
+  },
 ];
 
 export function AppSidebar() {
