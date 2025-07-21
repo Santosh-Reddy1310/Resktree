@@ -106,6 +106,21 @@ const projectLinks = [
     url: 'https://tesla-pulse.vercel.app/',
     icon: FolderOpen,
   },
+  {
+    title: 'AutoMl',
+    url: 'https://automl-flow.streamlit.app/',
+    icon: FolderOpen,
+  },
+  {
+    title: 'AgriScope',
+    url: 'https://agriscope.streamlit.app/',
+    icon: FolderOpen,
+  },
+  {
+    title: 'E - Waste Classification',
+    url: 'https://github.com/Santosh-Reddy1310/E-Waste-Project/blob/main/Final_project_e-waste.ipynb',
+    icon: FolderOpen,
+  },
 ];
 
 export function AppSidebar() {
