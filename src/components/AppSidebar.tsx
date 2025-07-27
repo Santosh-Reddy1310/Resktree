@@ -121,6 +121,11 @@ const projectLinks = [
     url: 'https://github.com/Santosh-Reddy1310/E-Waste-Project/blob/main/Final_project_e-waste.ipynb',
     icon: FolderOpen,
   },
+   {
+    title: 'Roastume - Resume Analyser & Roaster',
+    url: 'https://roastume.streamlit.app/',
+    icon: FolderOpen,
+  },
 ];
 
 export function AppSidebar() {
