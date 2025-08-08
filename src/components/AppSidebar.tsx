@@ -62,8 +62,43 @@ const portfolioLinks = [
 
 const projectLinks = [
   {
+    title: 'AgriScope',
+    url: 'https://agriscope.streamlit.app/',
+    icon: FolderOpen,
+  },
+  {
+    title: 'AutoMl',
+    url: 'https://automl-flow.streamlit.app/',
+    icon: FolderOpen,
+  },
+  {
+    title: 'Breast Cancer Prediction',
+    url: 'https://predictbc.streamlit.app/',
+    icon: FolderOpen,
+  },
+  {
     title: 'DashBoard UI',
     url: 'https://dash-ui-ruby.vercel.app/',
+    icon: FolderOpen,
+  },
+  {
+    title: 'E - Waste Classification',
+    url: 'https://github.com/Santosh-Reddy1310/E-Waste-Project/blob/main/Final_project_e-waste.ipynb',
+    icon: FolderOpen,
+  },
+  {
+    title: 'Gen Ai Search Engine',
+    url: 'https://resk-genai-app.streamlit.app/',
+    icon: FolderOpen,
+  },
+  {
+    title: 'MediScan.AI',
+    url: 'https://med-scan-ai.streamlit.app/',
+    icon: FolderOpen,
+  },
+  {
+    title: 'PaperProof - AI Generated Paper',
+    url: 'https://paper-proof.onrender.com/',
     icon: FolderOpen,
   },
   {
@@ -72,8 +107,8 @@ const projectLinks = [
     icon: FolderOpen,
   },
   {
-    title: 'SRK College Website Redesign',
-    url: 'https://srkit-innovate-hub.vercel.app/',
+    title: 'Roastume - Resume Analyser & Roaster',
+    url: 'https://roastume.streamlit.app/',
     icon: FolderOpen,
   },
   {
@@ -87,48 +122,13 @@ const projectLinks = [
     icon: FolderOpen,
   },
   {
-    title: 'Gen Ai Search Engine',
-    url: 'https://resk-genai-app.streamlit.app/',
-    icon: FolderOpen,
-  },
-  {
-    title: 'Breast Cancer Prediction',
-    url: 'https://predictbc.streamlit.app/',
-    icon: FolderOpen,
-  },
-  {
-    title: 'MediScan.AI',
-    url: 'https://med-scan-ai.streamlit.app/',
+    title: 'SRK College Website Redesign',
+    url: 'https://srkit-innovate-hub.vercel.app/',
     icon: FolderOpen,
   },
   {
     title: 'TeslaPulse.AI',
     url: 'https://tesla-pulse.vercel.app/',
-    icon: FolderOpen,
-  },
-  {
-    title: 'AutoMl',
-    url: 'https://automl-flow.streamlit.app/',
-    icon: FolderOpen,
-  },
-  {
-    title: 'AgriScope',
-    url: 'https://agriscope.streamlit.app/',
-    icon: FolderOpen,
-  },
-  {
-    title: 'E - Waste Classification',
-    url: 'https://github.com/Santosh-Reddy1310/E-Waste-Project/blob/main/Final_project_e-waste.ipynb',
-    icon: FolderOpen,
-  },
-   {
-    title: 'Roastume - Resume Analyser & Roaster',
-    url: 'https://roastume.streamlit.app/',
-    icon: FolderOpen,
-  },
-  {
-    title: 'PaperProof - AI Generated Paper',
-    url: 'https://paper-proof.onrender.com/',
     icon: FolderOpen,
   },
 ];
