@@ -126,6 +126,11 @@ const projectLinks = [
     url: 'https://roastume.streamlit.app/',
     icon: FolderOpen,
   },
+  {
+    title: 'PaperProof - AI Generated Paper',
+    url: 'https://paper-proof.onrender.com/',
+    icon: FolderOpen,
+  },
 ];
 
 export function AppSidebar() {
