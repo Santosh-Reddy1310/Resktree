@@ -131,6 +131,11 @@ const projectLinks = [
     url: 'https://tesla-pulse.vercel.app/',
     icon: FolderOpen,
   },
+  {
+    title: 'CarVerse',
+    url: 'https://carverse.streamlit.app/',
+    icon: FolderOpen,
+  },
 ];
 
 export function AppSidebar() {
