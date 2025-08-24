@@ -62,33 +62,23 @@ const portfolioLinks = [
 
 const projectLinks = [
   {
+    title: 'PaperProof – AI Research Paper Generator',
+    url: 'https://paper-proof.onrender.com/',
+    icon: FolderOpen,
+  },
+  {
+    title: 'InsightSphere – AI Agriculture Insights Dashboard',
+    url: 'https://insightsphere-azure.vercel.app/',
+    icon: FolderOpen,
+  },
+  {
     title: 'AgriScope',
     url: 'https://agriscope.streamlit.app/',
     icon: FolderOpen,
   },
   {
-    title: 'AutoMl',
+    title: 'AutoML',
     url: 'https://automl-flow.streamlit.app/',
-    icon: FolderOpen,
-  },
-  {
-    title: 'Breast Cancer Prediction',
-    url: 'https://predictbc.streamlit.app/',
-    icon: FolderOpen,
-  },
-  {
-    title: 'DashBoard UI',
-    url: 'https://dash-ui-ruby.vercel.app/',
-    icon: FolderOpen,
-  },
-  {
-    title: 'E - Waste Classification',
-    url: 'https://github.com/Santosh-Reddy1310/E-Waste-Project/blob/main/Final_project_e-waste.ipynb',
-    icon: FolderOpen,
-  },
-  {
-    title: 'Gen Ai Search Engine',
-    url: 'https://resk-genai-app.streamlit.app/',
     icon: FolderOpen,
   },
   {
@@ -97,33 +87,8 @@ const projectLinks = [
     icon: FolderOpen,
   },
   {
-    title: 'PaperProof - AI Generated Paper',
-    url: 'https://paper-proof.onrender.com/',
-    icon: FolderOpen,
-  },
-  {
-    title: 'RESK Chatbot Assistant',
-    url: 'https://resk-chatbot.vercel.app/',
-    icon: FolderOpen,
-  },
-  {
-    title: 'Roastume - Resume Analyser & Roaster',
-    url: 'https://roastume.streamlit.app/',
-    icon: FolderOpen,
-  },
-  {
-    title: 'Saas PortFolio',
-    url: 'https://resk-portfolio.vercel.app/',
-    icon: FolderOpen,
-  },
-  {
-    title: 'Simple Landing Portfolio Page',
-    url: 'https://re-sk.netlify.app/',
-    icon: FolderOpen,
-  },
-  {
-    title: 'SRK College Website Redesign',
-    url: 'https://srkit-innovate-hub.vercel.app/',
+    title: 'Gen AI Search Engine',
+    url: 'https://resk-genai-app.streamlit.app/',
     icon: FolderOpen,
   },
   {
@@ -132,11 +97,52 @@ const projectLinks = [
     icon: FolderOpen,
   },
   {
+    title: 'Roastume – Resume Analyser & Roaster',
+    url: 'https://roastume.streamlit.app/',
+    icon: FolderOpen,
+  },
+  {
+    title: 'RESK Chatbot Assistant',
+    url: 'https://resk-chatbot.vercel.app/',
+    icon: FolderOpen,
+  },
+  {
+    title: 'Breast Cancer Prediction',
+    url: 'https://predictbc.streamlit.app/',
+    icon: FolderOpen,
+  },
+  {
+    title: 'E-Waste Classification',
+    url: 'https://github.com/Santosh-Reddy1310/E-Waste-Project/blob/main/Final_project_e-waste.ipynb',
+    icon: FolderOpen,
+  },
+  {
     title: 'CarVerse',
     url: 'https://carverse.streamlit.app/',
     icon: FolderOpen,
   },
+  {
+    title: 'DashBoard UI',
+    url: 'https://dash-ui-ruby.vercel.app/',
+    icon: FolderOpen,
+  },
+  {
+    title: 'SRK College Website Redesign',
+    url: 'https://srkit-innovate-hub.vercel.app/',
+    icon: FolderOpen,
+  },
+  {
+    title: 'SaaS Portfolio',
+    url: 'https://resk-portfolio.vercel.app/',
+    icon: FolderOpen,
+  },
+  {
+    title: 'Simple Landing Portfolio Page',
+    url: 'https://re-sk.netlify.app/',
+    icon: FolderOpen,
+  },
 ];
+
 
 export function AppSidebar() {
   return (
