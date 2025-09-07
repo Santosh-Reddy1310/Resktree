@@ -67,6 +67,12 @@ const projectLinks = [
     icon: FolderOpen,
   },
   {
+    title: 'QBot – Hybrid Quantum AI Chatbot',
+    url: 'https://qbot-ai.streamlit.app/',
+    icon: FolderOpen,
+  }
+  ,
+  {
     title: 'InsightSphere – AI Agriculture Insights Dashboard',
     url: 'https://insightsphere-azure.vercel.app/',
     icon: FolderOpen,
@@ -149,7 +155,7 @@ export function AppSidebar() {
     <Sidebar className="border-r border-border/40">
       <SidebarHeader className="p-4">
         <div className="flex items-center gap-3">
-          <img 
+          <img
             src="/lovable-uploads/d73fc8f9-c8c2-42e3-99a0-01e4dfeef9b7.png"
             alt="RESK"
             className="w-8 h-8 rounded-full"
@@ -163,7 +169,7 @@ export function AppSidebar() {
           <ThemeToggle />
         </div>
       </SidebarHeader>
-      
+
       <SidebarContent className="sidebar-content-scrollable">
         <SidebarGroup>
           <SidebarGroupLabel>Navigation</SidebarGroupLabel>
