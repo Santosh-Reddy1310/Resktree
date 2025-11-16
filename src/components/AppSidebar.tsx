@@ -1,260 +1,101 @@
 import React from 'react';
-import { Home, ExternalLink, FolderOpen, User, Instagram, Music, BookOpen } from 'lucide-react';
 import {
   Sidebar,
   SidebarContent,
+  SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
+  SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarHeader,
   SidebarSeparator,
 } from '@/components/ui/sidebar';
 import { ThemeToggle } from './ThemeToggle';
+import type { BaseLink } from '@/config/link-data';
+import {
+  contactLinks,
+  navigationLinks,
+  portfolioLinks,
+  projects,
+  socialLinks,
+} from '@/config/link-data';
 
-const socialLinks = [
-  {
-    title: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/reddy-santosh-kumar-a5b9622a2/',
-    icon: ExternalLink,
-  },
-  {
-    title: 'GitHub',
-    url: 'https://github.com/',
-    icon: ExternalLink,
-  },
-  {
-    title: 'Instagram',
-    url: 'https://www.instagram.com/syntax_error_sk/?next=%2F',
-    icon: Instagram,
-  },
-  {
-    title: 'Threads',
-    url: 'https://www.threads.com/?xmt=AQF0Me9aJ05xjQnIx9g86h9MhNKVg4tjAOPFRrfS-s_E2l4&next=%2F',
-    icon: ExternalLink,
-  },
-  {
-    title: 'Spotify',
-    url: 'https://open.spotify.com/user/31qbytuay5cuqdesdxtxuqythopq',
-    icon: Music,
-  },
-];
+const projectShortcuts: BaseLink[] = projects
+  .filter((project) => project.featured)
+  .map((project) => ({
+    title: project.title,
+    url: project.url,
+    icon: project.icon,
+    external: true,
+  }));
 
-const portfolioLinks = [
-  {
-    title: 'Live Portfolio',
-    url: 'https://resk-portfolio.vercel.app/',
-    icon: ExternalLink,
-  },
-  {
-    title: 'Notion Portfolio',
-    url: 'https://yummy-squash-18c.notion.site/RESK-2182ce4878a9809a9e8fd23de5e8eb48?pvs=74',
-    icon: BookOpen,
-  },
-  {
-    title: 'Personal Notion',
-    url: 'https://www.notion.so/0d2c629503804d26a4ebb7c5ecbd5944',
-    icon: BookOpen,
-  },
-];
-
-const projectLinks = [
-  {
-    title: 'PaperProof – AI Research Paper Generator',
-    url: 'https://paper-proof.onrender.com/',
-    icon: FolderOpen,
-  },
-  {
-    title: 'QBot – Hybrid Quantum AI Chatbot',
-    url: 'https://qbot-ai.streamlit.app/',
-    icon: FolderOpen,
-  }
-  ,
-  {
-    title: 'InsightSphere – AI Agriculture Insights Dashboard',
-    url: 'https://insightsphere-azure.vercel.app/',
-    icon: FolderOpen,
-  },
-  {
-    title: 'AgriScope',
-    url: 'https://agriscope.streamlit.app/',
-    icon: FolderOpen,
-  },
-  {
-    title: 'AutoML',
-    url: 'https://automl-flow.streamlit.app/',
-    icon: FolderOpen,
-  },
-  {
-    title: 'MediScan.AI',
-    url: 'https://med-scan-ai.streamlit.app/',
-    icon: FolderOpen,
-  },
-  {
-    title: 'Gen AI Search Engine',
-    url: 'https://resk-genai-app.streamlit.app/',
-    icon: FolderOpen,
-  },
-  {
-    title: 'TeslaPulse.AI',
-    url: 'https://tesla-pulse.vercel.app/',
-    icon: FolderOpen,
-  },
-  {
-    title: 'Roastume – Resume Analyser & Roaster',
-    url: 'https://roastume.streamlit.app/',
-    icon: FolderOpen,
-  },
-  {
-    title: 'RESK Chatbot Assistant',
-    url: 'https://resk-chatbot.vercel.app/',
-    icon: FolderOpen,
-  },
-  {
-    title: 'Breast Cancer Prediction',
-    url: 'https://predictbc.streamlit.app/',
-    icon: FolderOpen,
-  },
-  {
-    title: 'E-Waste Classification',
-    url: 'https://github.com/Santosh-Reddy1310/E-Waste-Project/blob/main/Final_project_e-waste.ipynb',
-    icon: FolderOpen,
-  },
-  {
-    title: 'CarVerse',
-    url: 'https://carverse.streamlit.app/',
-    icon: FolderOpen,
-  },
-  {
-    title: 'DashBoard UI',
-    url: 'https://dash-ui-ruby.vercel.app/',
-    icon: FolderOpen,
-  },
-  {
-    title: 'SRK College Website Redesign',
-    url: 'https://srkit-innovate-hub.vercel.app/',
-    icon: FolderOpen,
-  },
-  {
-    title: 'SaaS Portfolio',
-    url: 'https://resk-portfolio.vercel.app/',
-    icon: FolderOpen,
-  },
-  {
-    title: 'Simple Landing Portfolio Page',
-    url: 'https://re-sk.netlify.app/',
-    icon: FolderOpen,
-  },
-];
-
+const linkGroups: { label: string; links: BaseLink[] }[] = [
+  { label: 'Navigate', links: navigationLinks },
+  { label: 'Social', links: socialLinks },
+  { label: 'Portfolio', links: portfolioLinks },
+  { label: 'Featured Projects', links: projectShortcuts },
+  { label: 'Contact', links: contactLinks },
+].filter((group) => group.links.length > 0);
 
 export function AppSidebar() {
   return (
-    <Sidebar className="border-r border-border/40">
-      <SidebarHeader className="p-4">
+    <Sidebar className="border-r border-border/50 bg-sidebar text-sidebar-foreground">
+      <SidebarHeader className="gap-4 p-4 pb-2">
         <div className="flex items-center gap-3">
           <img
             src="/lovable-uploads/d73fc8f9-c8c2-42e3-99a0-01e4dfeef9b7.png"
             alt="RESK"
-            className="w-8 h-8 rounded-full"
+            className="h-9 w-9 rounded-full border border-sidebar-border"
           />
           <div>
-            <h2 className="font-semibold text-sm">RESK Dashboard</h2>
-            <p className="text-xs text-muted-foreground">Developer Hub</p>
+            <h2 className="text-sm font-semibold text-sidebar-foreground">RESK Dashboard</h2>
+            <p className="text-xs text-sidebar-foreground/70">AI-first developer hub</p>
           </div>
-        </div>
-        <div className="mt-3">
-          <ThemeToggle />
         </div>
       </SidebarHeader>
 
-      <SidebarContent className="sidebar-content-scrollable">
-        <SidebarGroup>
-          <SidebarGroupLabel>Navigation</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild>
-                  <a href="/">
-                    <Home />
-                    <span>Home</span>
-                  </a>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild>
-                  <a href="https://tally.so/r/mBqjA5" target="_blank" rel="noopener noreferrer">
-                    <User />
-                    <span>Contact Me</span>
-                  </a>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
+      <SidebarContent className="sidebar-content-scrollable pb-4">
+        {linkGroups.map(({ label, links }, index) => (
+          <React.Fragment key={label}>
+            <SidebarGroup>
+              <SidebarGroupLabel className="text-xs font-semibold uppercase tracking-wide text-sidebar-foreground/60">
+                {label}
+              </SidebarGroupLabel>
+              <SidebarGroupContent>
+                <SidebarMenu>
+                  {links.map((link) => {
+                    const Icon = link.icon;
+                    const isExternal = link.external ?? true;
 
-        <SidebarSeparator />
-
-        <SidebarGroup>
-          <SidebarGroupLabel>Social Links</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {socialLinks.map((link) => (
-                <SidebarMenuItem key={link.title}>
-                  <SidebarMenuButton asChild>
-                    <a href={link.url} target="_blank" rel="noopener noreferrer">
-                      <link.icon />
-                      <span>{link.title}</span>
-                    </a>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-
-        <SidebarSeparator />
-
-        <SidebarGroup>
-          <SidebarGroupLabel>Portfolio</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {portfolioLinks.map((link) => (
-                <SidebarMenuItem key={link.title}>
-                  <SidebarMenuButton asChild>
-                    <a href={link.url} target="_blank" rel="noopener noreferrer">
-                      <link.icon />
-                      <span>{link.title}</span>
-                    </a>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-
-        <SidebarSeparator />
-
-        <SidebarGroup>
-          <SidebarGroupLabel>Projects</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {projectLinks.map((link) => (
-                <SidebarMenuItem key={link.title}>
-                  <SidebarMenuButton asChild>
-                    <a href={link.url} target="_blank" rel="noopener noreferrer">
-                      <link.icon />
-                      <span>{link.title}</span>
-                    </a>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
+                    return (
+                      <SidebarMenuItem key={`${label}-${link.title}`}>
+                        <SidebarMenuButton asChild>
+                          <a
+                            href={link.url}
+                            target={isExternal ? '_blank' : undefined}
+                            rel={isExternal ? 'noopener noreferrer' : undefined}
+                          >
+                            <Icon className="h-4 w-4" />
+                            <span>{link.title}</span>
+                          </a>
+                        </SidebarMenuButton>
+                      </SidebarMenuItem>
+                    );
+                  })}
+                </SidebarMenu>
+              </SidebarGroupContent>
+            </SidebarGroup>
+            {index < linkGroups.length - 1 && <SidebarSeparator />}
+          </React.Fragment>
+        ))}
       </SidebarContent>
+
+      <SidebarFooter className="mt-auto gap-3 border-t border-sidebar-border/60 bg-sidebar/60">
+        <ThemeToggle />
+        <p className="text-center text-xs text-sidebar-foreground/60">Crafted with curiosity.</p>
+      </SidebarFooter>
     </Sidebar>
   );
 }
